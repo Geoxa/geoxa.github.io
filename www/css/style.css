@@ -421,6 +421,15 @@ body.foto #inner h2 {
 	clear: none;
 }
 
+.foto #inner ul li {
+	min-height: 220px;
+}
+
+.foto #inner ul li p {
+	padding-top: 0;
+}
+
+
 div.column {
 	padding: 1%;
 	margin-top: 1em;
