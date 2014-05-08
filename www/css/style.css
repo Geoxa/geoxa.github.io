@@ -49,6 +49,10 @@ ul {
 	padding-left: 1em;
 }
 
+em {
+	text-transform: uppercase;
+}
+
 #footer a, #footer a:visited {
 	color: #ffa211;
 	text-decoration: none;
@@ -65,6 +69,7 @@ ul {
 
 #content h1, #content h2, #content h3 {
 	font-size: 1.5em;
+	margin-bottom: 0.5em;
 }
 
 a.more {
@@ -74,7 +79,13 @@ a.more {
 }
 
 p {
+	padding: 1em 0 1em 0;
+	line-height: 1.5;
+}
+
+#clients p {
 	padding: 0.5em 0 0.5em 0;
+	line-height: 1.3;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -82,6 +93,14 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
 h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
 	color: #ffa211;
 	text-decoration: none;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+	-webkit-transition: border 0.3s, margin 0.3s;
+    transition: border 0.3s, margin 0.3s;
+
+    border-bottom: 2px solid #ffa211;
+    margin-bottom: -2px;
 }
 
 /*
@@ -202,6 +221,7 @@ h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visit
 
 #intro, #clients {
 	margin-bottom: 1em;
+	border-radius: 5px;
 }
 
 #intro {
@@ -219,6 +239,14 @@ h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visit
 	border: 3px dotted #333;
 	padding: 1.5%;
 	font-size: 1.1em;
+
+	-webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.3) inset;
+	-moz-box-shadow:    1px 1px 10px 0px rgba(0, 0, 0, 0.3) inset;
+	box-shadow:         1px 1px 10px 0px rgba(0, 0, 0, 0.3) inset;
+}
+
+img {
+	border-radius: 2px;
 }
 
 /*
@@ -230,10 +258,15 @@ h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visit
 	background: #222;
 	margin-top: 1em;
 	margin-bottom: 3em;
-	padding-top: 10px;
+	padding-top: 20px;
 	padding-bottom: 2em;
 	color: #ccc;
 	letter-spacing: 0.01em;
+	border-radius: 3px;
+
+	-webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:    1px 1px 10px 0px rgba(0, 0, 0, 0.2);
+	box-shadow:         1px 1px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 #content #attivita, #content #risorse, #content #photo {
@@ -249,6 +282,10 @@ h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visit
 	overflow: hidden;
 	margin-bottom: 20px;
 	height: 215px;
+	border-radius: 2px;
+	-webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.3) inset;
+	-moz-box-shadow:    1px 1px 10px 0px rgba(0, 0, 0, 0.3) inset;
+	box-shadow:         1px 1px 10px 0px rgba(0, 0, 0, 0.3) inset;
 }
 
 body.attivita #illustrative-image {
@@ -259,16 +296,20 @@ body.risorse #illustrative-image {
 	background: url(../images/risorse_b.jpg) no-repeat;
 }
 
-#content #attivita {
-	width: 34.5%;
+#content #drone {
 	margin:0 3% 0 3%;
+}
+
+#content #attivita {
+	width: 35.3%;
+	margin:0 2.6% 0 2.6%;
 	float: left;
 }
 
 #content #risorse {
-	width: 34.5%;
+	width: 35.3%;
 	overflow: hidden;
-	margin:0 3% 0 0;
+	margin:0 2.6% 0 0;
 	float: left;
 }
 
@@ -346,22 +387,35 @@ body.foto #inner h2 {
 }
 
 #inner ul li.feature {
-	padding: 1%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
 	margin-top: 1em;
-	border: 1px dotted #333;
+	/*border: 1px dotted #333;*/
+	background-color: #252525;
 	clear: both;
+	width: 100%;
+	padding: 20px 4%;
+}
+
+#inner ul li.feature ul {
+	margin-top: 0;
+	padding-top: 0;
 }
 
 #inner ul li.odd {
-	width: 46%;
+	width: 49%;
 	margin: 1%;
+	min-height: 330px;
 	margin-left: 0;
 	float: left;
 }
 
 #inner ul li.even {
-	width: 46%;
+	width: 49%;
 	margin: 1%;
+	min-height: 330px;
 	margin-right: 0;
 	float: right;
 	clear: none;
