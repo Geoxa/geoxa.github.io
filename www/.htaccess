@@ -1,0 +1,12 @@
+Redirect /zoc http://www.z-oc.com
+
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME}!-d
+#RewriteCond %{REQUEST_FILENAME}!-f
+#RewriteRule ^([^.]+)\.html$ $1 [L]
+
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}\.php -f
+#RewriteRule ^(.*)$ $1.php
+
+#RewriteRule ^zoc$ http://www.z-oc.com [R=302,L]

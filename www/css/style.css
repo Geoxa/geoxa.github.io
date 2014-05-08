@@ -1,0 +1,405 @@
+/* Eric Meyer's Baseline Style */
+html,body,div,span,
+applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,font,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+dd,dl,dt,li,ol,ul,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 100%;
+	font-family: inherit;
+	text-align: left;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ol,ul {
+	list-style: none;
+}
+
+q:before,q:after,
+blockquote:before,blockquote:after {
+	content: "";
+}
+/* /Eric Meyer's Baseline Style */
+
+
+body {
+	font-family: "Optima", "Myriad Pro", "Helvetica", "Arial";
+	font-size: medium;
+	line-height: 1.3;
+	text-align: center;
+	background: #1a1a1a;
+	color: #f2b85e;
+	color: #a86;
+	font-size: medium;
+}
+
+ul {
+	margin: 0.5em 0 0.5em 0;
+	list-style: disc;
+	padding-left: 1em;
+}
+
+#footer a, #footer a:visited {
+	color: #ffa211;
+	text-decoration: none;
+	border-bottom: 1px dotted #ffa211;
+}
+
+#footer a:hover {
+	border-bottom: 1px solid #ffa211;
+}
+
+* html body {
+/*	font-size: 0.9em;*/
+}
+
+#content h1, #content h2, #content h3 {
+	font-size: 1.5em;
+}
+
+a.more {
+	display: block;
+	text-align: right;
+	padding-right: 1em;
+}
+
+p {
+	padding: 0.5em 0 0.5em 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+	color: #ffa211;
+	text-decoration: none;
+}
+
+/*
+ *  Container
+ */
+
+.container {
+	width: 49em;
+	margin: auto;
+	position: relative;
+}
+
+#header, #footer {
+	min-width: 49em;
+}
+
+/*
+ *  Header
+ */
+
+#header {
+	height: 8em;
+	background: #000;
+	color: #fff;
+	border-bottom: 1px dashed #1a1a1a;
+}
+
+#header h2 {
+	color: #e9ba8c;
+}
+
+#header #branding {
+	position: absolute;
+	margin-top: 30px;
+	margin-left: 30px;
+	width: 137px;
+	height: 181px;
+	left: 0;
+	background: url(../images/logo_n.png) no-repeat left top;
+}
+
+* html #header #branding
+{
+	background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader
+	(
+		src='../images/logo_n.png',sizingMethod='scale'
+	);
+}
+
+#header #branding span {
+	display: none;
+}
+
+#header #slogan {
+	padding-top: 5.2em;
+	padding-right: 150px;
+	text-align: right;
+	font-size: 1.2em;
+}
+
+#header #contact {
+	position: absolute;
+	margin-top: 50px;
+	margin-left: 10px;
+	top: 0;
+	right: 0;
+	height: 100px;
+	width: 100px;
+	background: url(../images/contact_seal.png) no-repeat left top;
+	z-index: 20;
+	display: block;
+}
+
+* html #header #contact
+{
+	background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader
+	(
+		src='../images/contact_seal.png',sizingMethod='scale'
+	);
+}
+
+#header #contact span {
+	display: none;
+}
+
+#main-menu {
+	margin-bottom: 3em;
+	padding-top: 0.2em;
+}
+
+#main-menu ul {
+	font-size: 1.2em;
+	text-align: right;
+	margin-right: 150px;
+}
+
+#main-menu ul li {
+	display: inline;
+	margin: 0.3em;
+	margin-top: 0;
+}
+
+#main-menu ul li:hover, #main-menu ul li.active {
+	border-bottom: 3px solid #fff;
+}
+
+#main-menu ul li a {
+	color: #fff;
+	padding: 0.5em 0em 0.3em 0em;
+	text-decoration: none;
+}
+
+/*
+ *  About
+ */
+
+#intro, #clients {
+	margin-bottom: 1em;
+}
+
+#intro {
+	width: 63%;
+	padding: 1%;
+	float: left;
+	font-size: 1.6em;
+	letter-spacing: 0.01em;
+	line-height: 1.3;
+}
+
+#clients {
+	width: 30%;
+	float: right;
+	border: 3px dotted #333;
+	padding: 1.5%;
+	font-size: 1.1em;
+}
+
+/*
+ *  Content
+ */
+
+#content .container {
+	clear: both;
+	background: #222;
+	margin-top: 1em;
+	margin-bottom: 3em;
+	padding-top: 10px;
+	padding-bottom: 2em;
+	color: #ccc;
+	letter-spacing: 0.01em;
+}
+
+#content #attivita, #content #risorse, #content #photo {
+	overflow: hidden;
+	padding: 2em 0 2em 0;
+}
+
+#content #attivita, #content #risorse {
+	margin-bottom: 0.5em;
+}
+
+#illustrative-image {
+	overflow: hidden;
+	margin-bottom: 20px;
+	height: 215px;
+}
+
+body.attivita #illustrative-image {
+	background: url(../images/attivita_b.jpg) no-repeat;
+}
+
+body.risorse #illustrative-image {
+	background: url(../images/risorse_b.jpg) no-repeat;
+}
+
+#content #attivita {
+	width: 34.5%;
+	margin:0 3% 0 3%;
+	float: left;
+}
+
+#content #risorse {
+	width: 34.5%;
+	overflow: hidden;
+	margin:0 3% 0 0;
+	float: left;
+}
+
+#content #photo {
+	width: 18%;
+	overflow: hidden;
+	margin:0 3% 0 0;
+	float: right;
+}
+
+* html #content #attivita {
+	margin:0 1.5% 0 1.5%;
+}
+
+* html #content #risorse, * html #content #photo {
+	margin:0 1.5% 0 0;
+}
+
+/*
+ *  Footer
+ */
+#footer {
+	color: #000;
+	font-size: 0.8em;
+	background: #3e3e3e;
+	background: #4e4e4e url(../images/footer_shade.png) repeat-x left top;
+	padding: 1em 0 1em 0;
+}
+
+#footer p {
+	text-align: center;
+}
+
+
+
+
+.clearer {
+	height: 0;
+	clear: both;
+}
+
+
+#inner {
+	padding: 1em 3% 1em 3%;
+	overflow: hidden;
+}
+
+#inner h2 {
+	font-size: 2.0em;
+	padding-left: 0.5em;
+	background: #222;
+	margin-top: -1.9em;
+	margin-bottom: 0.5em;
+	
+	width: 100%;
+	float: left;
+	filter:alpha(opacity=75); 
+	-moz-opacity: 0.75; 
+	opacity: 0.75;
+}
+
+body.foto #inner h2 {
+	margin-top: 0em;
+	margin-bottom: 0em;
+}
+
+#inner ul {
+	list-style: none;
+	padding: 0;
+}
+
+#inner ul li ul {
+	list-style: disc;
+	padding: 1em;
+}
+
+#inner ul li.feature {
+	padding: 1%;
+	margin-top: 1em;
+	border: 1px dotted #333;
+	clear: both;
+}
+
+#inner ul li.odd {
+	width: 46%;
+	margin: 1%;
+	margin-left: 0;
+	float: left;
+}
+
+#inner ul li.even {
+	width: 46%;
+	margin: 1%;
+	margin-right: 0;
+	float: right;
+	clear: none;
+}
+
+div.column {
+	padding: 1%;
+	margin-top: 1em;
+	clear: both;
+}
+
+div.left {
+	width: 46%;
+	margin: 1%;
+	margin-left: 0;
+	float: left;
+}
+
+div.right {
+	width: 46%;
+	margin: 1%;
+	margin-right: 0;
+	float: right;
+	clear: none;
+}
+
+.foto #inner ul li img {
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+.foto #inner ul li p {
+	margin-left: 160px;
+}
+
+img.illustrative {
+	float: right;
+	padding: 10px;
+	border: 1px dotted #333;
+}
