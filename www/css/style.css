@@ -513,3 +513,36 @@ img.illustrative {
 	box-shadow:         1px 1px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
+body.drone table {
+	background: #282828;
+	width: 100%;
+}
+
+body.drone table tr:first-child {
+	border-bottom: 1px solid #333;
+}
+
+body.drone table tr:hover {
+	background-color: #333;
+}
+
+body.drone table tr:first-child:hover {
+	background-color: transparent;
+}
+
+
+body.drone table th {
+	font-weight: bold;
+}
+
+body.drone table td,
+body.drone table th {
+	padding: 10px 20px 10px 20px;
+	text-align: center;
+	border-left: 1px solid #333;
+}
+
+body.drone table td:first-child,
+body.drone table th:first-child {
+	border-left: none;
+}
