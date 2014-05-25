@@ -1,21 +1,38 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.sticky.js"></script>
+	<script type="text/javascript" src="js/prototype.js"></script>
+	<script type="text/javascript" src="js/scriptaculous.js?load=effects"></script>
+	<script type="text/javascript" src="js/lightbox.js"></script>   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="js/main.js"></script>   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen" />
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="description" content="Topografia in Valsugana e Trentino" />
-    <meta name="language" content="it" />
-    <meta name="keywords" content="drone, topografia, geometra, trentino, valsugana" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	<meta name="description" content="Topografia in Valsugana e Trentino" />
+	<meta name="language" content="it" />
+	<meta name="keywords" content="drone, topografia, geometra, trentino, valsugana" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
 
-	<title>Topografia in Valsugana e Trentino &raquo; Geoxa</title>
+	<title>Rilievi territoriali e servizi topografici in Trentino Alto-Adige &raquo; Geoxa</title>
 </head>
 
-<body>
+<body class="template">
+	<div id="branding">
+		<div class="container">
+			<a href="index.html">
+				<h1><span>Topografia in Valsugana e Trentino &raquo; Geoxa</span></h1>            
+			</a>
+		</div>
+	</div>
+	<div id="slogan">
+		<div class="container">
+			<h2>Rileviamo ovunque con rapidità e precisione</h2>            
+		</div>
+	</div>
+
 	<div id="header">
 		<div class="container">
-			<h1 id="branding"><span>Topografia in Valsugana e Trentino &raquo; Geoxa</span></h1>
-			<h2 id="slogan">Rileviamo ovunque con rapidità e precisione</h2>
 			<a href="mailto:geoxa.gabriele@email.it" id="contact"><span>contatto email</span></a>
 		</div>
 	</div>
@@ -23,11 +40,11 @@
 	<div id="main-menu">
 		<div class="container">
 			<ul>
-				<li><a href="/geoxa/">Home</a></li>
-				<li><a href="/geoxa/drone.html">Drone</a></li>
-				<li><a href="/geoxa/attivita.html">Attività</a></li>
-				<li><a href="/geoxa/risorse.html">Risorse</a></li>
-				<li><a href="/geoxa/foto.html">Foto</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="drone.html">Drone</a></li>
+				<li><a href="attivita.html">Attività</a></li>
+				<li><a href="risorse.html">Risorse</a></li>
+				<li><a href="foto.html">Foto</a></li>
 				<li><a href="mailto:geoxa.gabriele@email.it">email</a></li>
 			</ul>
 		</div>
@@ -35,15 +52,16 @@
 
 	<div id="about">
 		<div class="container">
-			<p id="intro">Geoxa realizza servizzi in ambito topografico
+			<p id="intro">Geoxa realizza servizi in ambito topografico
 				e rilievi territoriali in genere; elabora dati
-				per eventuali calcoli o proggeti.
+				per eventuali calcoli o progetti.
 			</p>
 			<div id="clients">
 				<h4>Clienti</h4>
 				<p>Pubbliche amministrazioni, servizi provinciali, studi tecnici, liberi professionisti, privati.</p>
 			</div>
-			<p id="article"><a href="assets/drone-e-rilievi-impossibili.pdf">Leggi l'articolo: Drone e rilievi impossibili</a></p>		</div>
+			<p id="article"><span class="container"><a href="assets/drone-e-rilievi-impossibili.pdf">Leggi l'articolo: Drone e rilievi impossibili</a></span></p>
+		</div>
 	</div>
 
 	<div id="content">
