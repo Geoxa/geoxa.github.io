@@ -182,20 +182,27 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	font-size: 1.2em;
 }
 
-#header #contact {
+#contactBadge {
+	position: fixed;
+	right: 0;
+	top: 5px;
+	left: 0;
+	height: 100px;
+	z-index: 100;
+}
+
+#contactBadge #contact {
 	position: absolute;
-	margin-top: 50px;
-	margin-left: 10px;
 	top: 0;
 	right: 0;
 	height: 100px;
 	width: 100px;
 	background: url(../images/contact_seal.png) no-repeat left top;
-	z-index: 20;
+	z-index: 120;
 	display: block;
 }
 
-* html #header #contact
+* html #contactBadge #contact
 {
 	background: none;
 	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader
@@ -204,7 +211,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	);
 }
 
-#header #contact span {
+#contactBadge #contact span {
 	display: none;
 }
 
@@ -394,10 +401,9 @@ body.drone #illustrative-image {
  *  Footer
  */
 #footer {
-	color: #000;
+	color: #ccc;
 	font-size: 0.8em;
 	background: #3e3e3e;
-	background: #4e4e4e url(../images/footer_shade.png) repeat-x left top;
 	padding: 1em 0 1em 0;
 }
 
