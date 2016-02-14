@@ -29,6 +29,14 @@ q:before,q:after,
 blockquote:before,blockquote:after {
 	content: "";
 }
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 /* /Eric Meyer's Baseline Style */
 
 
@@ -115,10 +123,15 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	width: 49em;
 	margin: auto;
 	position: relative;
+	height: inherit;
 }
 
-#header, #footer {
-	min-width: 49em;
+@media (max-width: 49em) {
+	.container {
+		width: 100%;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
 }
 
 /*
@@ -130,6 +143,18 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	background: #000;
 	color: #fff;
 	border-bottom: 1px dashed #1a1a1a;
+}
+
+body.hamburger-active {
+	padding-top: 8em;
+}
+
+body.hamburger-active #header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 10em;
 }
 
 #header h2 {
@@ -144,6 +169,12 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	height: 181px;
 	left: 0;
 	background: url(../images/logo_n.png) no-repeat left top;
+	transition: all .3s;
+}
+
+body.hamburger-active #header #branding {
+    transform: scale(.5) translateY(-70px);
+    margin-top: 0;
 }
 
 * html #header #branding
@@ -160,10 +191,16 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 
 #header #slogan {
-	padding-top: 5.2em;
+	position: absolute;
+	bottom: 0.5em;
+	right: 0;
 	padding-right: 150px;
 	text-align: right;
 	font-size: 1.2em;
+}
+
+body.hamburger-active #header #slogan {
+	display: none;
 }
 
 #header #contact {
@@ -197,6 +234,76 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	padding-top: 0.2em;
 }
 
+#hamburger {
+	display: none;
+	height: 25px;	
+	width: 30px;
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;
+	border: none;
+	margin: none;
+	background-color: transparent;
+	position: relative;
+	float: right;
+	margin-top: 1em;
+}
+
+#hamburger:focus {
+	outline: none;
+}
+
+#hamburger span {
+    transition: all .5s;
+	display: block;
+	position: absolute;
+	background: white;
+	padding: 0;
+	color: white;
+	text-indent: -999em;
+	width: 30px;
+	height: 3px;
+	border-radius: 5px;
+	top: 0;
+	left: 0;
+}
+
+body.hamburger-active #hamburger span {
+	transform: rotate(45deg) translateY(7px) translateX(7px);	
+}
+
+body.hamburger-active #hamburger span:before {
+	transform: rotate(90deg) translateX(-10px);
+}
+
+body.hamburger-active #hamburger span:after {
+	transform: rotate(180deg) translateX(0px) translateY(20px);
+	opacity: 0;
+}
+
+#hamburger span:before,
+#hamburger span:after {
+	content: "";
+	width: 30px;
+	height: 3px;
+	position: absolute;
+	left: 0;
+	border-radius: inherit;
+    transition: all .5s;
+}
+
+#hamburger span:before {
+	top: 10px;
+	background: white;
+}
+
+#hamburger span:after {
+	top: 20px;
+	background: white;
+}
+
+
+
 #main-menu ul {
 	font-size: 1.2em;
 	text-align: right;
@@ -219,9 +326,83 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	text-decoration: none;
 }
 
+@media (max-width: 49em) {
+	#header #contact {
+		display: none;
+	}
+
+	#header #slogan {
+		padding-right: 0;
+		padding-right: inherit;
+	    margin-left: 160px;
+	}
+
+	#main-menu ul {
+		margin-right: 0;
+	}
+}
+
+@media (max-width: 38em) {
+	#header #branding {
+		transform: scale(.8) translateY(-50px);
+	}
+
+	#header #slogan {
+		font-size: 1em;
+	}
+
+	#hamburger {
+		display: block;
+	}
+
+	#main-menu ul {
+		display: none;
+		position: fixed;
+		margin: 0;
+		top: 8em;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: #000;
+		z-index: 100;
+	}
+
+	body.hamburger-active #main-menu ul {
+		display: block;
+	}
+
+
+	#main-menu ul li {
+		display: block;
+		text-align: center;
+		border-radius: 5px;
+		font-size: 1.5em;
+	}
+
+	#main-menu ul li a {
+		display: block;
+		text-align: inherit;
+	}
+
+	#main-menu ul li:hover,
+	#main-menu ul li.active {
+		border-bottom: none;
+		background: #fff;
+		color: #000;
+	}
+	#main-menu ul li:hover a,
+	#main-menu ul li.active a {
+		color: inherit;
+	}
+}
+
 /*
  *  About
  */
+
+#about {
+	overflow: hidden;
+}
 
 #intro, #clients {
 	margin-bottom: 1em;
@@ -269,7 +450,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 
 #clients {
-	width: 30%;
+	width: 37%;
 	float: right;
 	border: 3px dotted #333;
 	padding: 1.5%;
@@ -282,6 +463,19 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 img {
 	border-radius: 2px;
+}
+
+@media (max-width: 49em) {
+	#intro,
+	#clients,
+	#article {
+		width: 100%;
+		float: none;
+	}
+
+	#intro {
+		margin-bottom: 16px;
+	}
 }
 
 /*
@@ -359,12 +553,30 @@ body.drone #illustrative-image {
 	float: right;
 }
 
+#content #photo img {
+	max-width: 45%;
+}
+
+#content .section-image {
+	width: 100%;
+	margin-bottom: 1em;
+}
+
 * html #content #attivita {
 	margin:0 1.5% 0 1.5%;
 }
 
 * html #content #risorse, * html #content #photo {
 	margin:0 1.5% 0 0;
+}
+
+@media (max-width: 49em) {
+	#content #attivita,
+	#content #risorse,
+	#content #photo {
+		width: auto;
+		float: none;
+	}
 }
 
 /*
@@ -381,7 +593,6 @@ body.drone #illustrative-image {
 #footer p {
 	text-align: center;
 }
-
 
 
 
@@ -436,6 +647,7 @@ body.foto #inner h2 {
 	clear: both;
 	width: 100%;
 	padding: 20px 4%;
+	overflow: hidden;
 }
 
 #inner ul li.feature ul {
@@ -467,7 +679,6 @@ body.foto #inner h2 {
 .foto #inner ul li p {
 	padding-top: 0;
 }
-
 
 div.column {
 	padding: 1%;
@@ -546,3 +757,39 @@ body.drone table td:first-child,
 body.drone table th:first-child {
 	border-left: none;
 }
+
+
+@media (max-width: 49em) {
+	#inner ul li.odd,
+	#inner ul li.even {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		min-height: auto;
+		float: none;
+	}
+
+	div.left,
+	div.right {
+		float: none;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	img.illustrative {
+		max-width: 100%;
+		float: none;
+	}
+
+	.atrezzatura {
+		clear: both;
+	}
+
+	p {
+		padding-top: 0;
+	}
+}
+
+
+
