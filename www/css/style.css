@@ -29,6 +29,15 @@ q:before,q:after,
 blockquote:before,blockquote:after {
 	content: "";
 }
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 /* /Eric Meyer's Baseline Style */
 
 
@@ -115,10 +124,15 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	width: 49em;
 	margin: auto;
 	position: relative;
+	height: inherit;
 }
 
-#header, #footer {
-	min-width: 49em;
+@media (max-width: 49em) {
+	.container {
+		width: 100%;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
 }
 
 /*
@@ -177,7 +191,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 #slogan h2 {
 	padding-top: 5.2em;
-	padding-right: 150px;
+	padding-right: 120px;
 	text-align: right;
 	font-size: 1.2em;
 }
@@ -229,7 +243,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 #main-menu ul {
 	font-size: 1.2em;
 	text-align: right;
-	margin-right: 150px;
+	margin-right: 110px;
 }
 
 #main-menu ul li {
@@ -252,6 +266,14 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
  *  About
  */
 
+#about {
+	overflow: hidden;
+}
+
+#about .container {
+	overflow: hidden;
+}
+
 #intro, #clients {
 	margin-bottom: 1em;
 	border-radius: 5px;
@@ -261,7 +283,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 	width: 63%;
 	padding: 1%;
 	padding-left: 0;
-	margin-bottom: 0;
+	margin-top: 0;
 	float: left;
 	font-size: 1.6em;
 	letter-spacing: 0.01em;
@@ -270,7 +292,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 #article-sticky-wrapper,
 #article {
-	float: left;
 	clear: left;
 }
 
@@ -299,7 +320,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 }
 
 #clients {
-	width: 30%;
+	width: 37%;
 	float: right;
 	border: 3px dotted #333;
 	padding: 1.5%;
@@ -312,6 +333,19 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 
 img {
 	border-radius: 2px;
+}
+
+@media (max-width: 49em) {
+	#intro,
+	#clients,
+	#article {
+		width: 100%;
+		float: none;
+	}
+
+	#intro {
+		margin-bottom: 16px;
+	}
 }
 
 /*
@@ -389,12 +423,32 @@ body.drone #illustrative-image {
 	float: right;
 }
 
+@media (max-width: 49em) {
+	#content #photo img {
+		max-width: 45%;
+	}
+
+	#content .section-image {
+		width: 100%;
+		margin-bottom: 1em;
+	}
+}
+
 * html #content #attivita {
 	margin:0 1.5% 0 1.5%;
 }
 
 * html #content #risorse, * html #content #photo {
 	margin:0 1.5% 0 0;
+}
+
+@media (max-width: 49em) {
+	#content #attivita,
+	#content #risorse,
+	#content #photo {
+		width: auto;
+		float: none;
+	}
 }
 
 /*
@@ -460,11 +514,11 @@ body.foto #inner h2 {
 			box-sizing: border-box;
 
 	margin-top: 1em;
-	/*border: 1px dotted #333;*/
 	background-color: #252525;
 	clear: both;
 	width: 100%;
 	padding: 20px 4%;
+	overflow: hidden;
 }
 
 #inner ul li.feature ul {
@@ -575,6 +629,42 @@ body.drone table td:first-child,
 body.drone table th:first-child {
 	border-left: none;
 }
+
+@media (max-width: 49em) {
+	#inner ul li.odd,
+	#inner ul li.even {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		min-height: auto;
+		float: none;
+	}
+
+	div.left,
+	div.right {
+		float: none;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	img.illustrative {
+		max-width: 100%;
+		float: none;
+	}
+
+	.atrezzatura {
+		clear: both;
+	}
+
+	p {
+		padding-top: 0;
+	}
+}
+
+/*
+ * Sticky Header
+ */
 
 .is-sticky #main-menu {
 	z-index: 100;
