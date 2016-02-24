@@ -41,9 +41,9 @@
 
         var classString = element.className, nameIndex = classString.indexOf(className);
 
-        // if (nameIndex !== -1) {
+        if (nameIndex !== -1) {
             classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
-        // }
+        }
 
         element.className = classString.replace(/ +/g, ' ');
     }

@@ -831,7 +831,8 @@ body.drone table th:first-child {
 		padding: 0;
 	}
 
-	img.illustrative {
+	img.illustrative,
+	iframe {
 		max-width: 100%;
 		float: none;
 	}
