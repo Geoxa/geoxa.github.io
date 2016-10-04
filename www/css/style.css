@@ -844,3 +844,13 @@ body.drone table th:first-child {
 		padding-top: 0;
 	}
 }
+
+body.preventivo #inner {
+	width:641px;
+	margin: auto;	
+}
+
+body.preventivo .google-form-preventivo {
+	margin-left: -106px;
+	margin-top: -201px;
+}
