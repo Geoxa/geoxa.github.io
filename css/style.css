@@ -254,7 +254,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
 #main-menu ul {
 	font-size: 1.2em;
 	text-align: right;
-	margin-right: 110px;
+	margin-right: 60px;
 	transition: margin .3s .1s;
 }
 
