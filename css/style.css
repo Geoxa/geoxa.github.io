@@ -846,7 +846,7 @@ body.drone table th:first-child {
 }
 
 body.preventivo #inner {
-	width:641px;
+	max-width: 641px;
 	margin: auto;	
 }
 
