@@ -104,12 +104,6 @@ body {
 	line-height: 1.3;
 	text-align: center;
 	background: #eee;
-	padding-top: 12em;
-}
-
-body.position-step2,
-body.position-step3,
-body.position-step4 {
 	padding-top: 11em;
 }
 
@@ -205,6 +199,7 @@ h6 a:hover {
 	margin: auto;
 	position: relative;
 	height: inherit;
+	max-width: 950px;
 }
 
 @media (max-width: 49em) {
@@ -222,7 +217,7 @@ h6 a:hover {
  */
 
 #header {
-	height: 12em;
+	height: 8em;
 	background: #666;
 	color: #fff;
 	z-index: 100;
@@ -247,23 +242,17 @@ h6 a:hover {
 	text-decoration: underline;
 }
 
-.position-step2 #header,
-.position-step3 #header,
-.position-step4 #header {
+#header {
 	height: 8em;
 }
 
-.position-step2 #branding,
-.position-step3 #branding,
-.position-step4 #branding {
+#branding {
 	position: absolute;
 	top: 10px;
 	z-index: 100;
 }
 
-.position-step2 #branding h1,
-.position-step3 #branding h1,
-.position-step4 #branding h1 {
+#branding h1 {
 	padding-top: 0;
 }
 
@@ -283,7 +272,7 @@ h6 a:hover {
 #branding h1 {
 	display: flex;
 	flex-direction: column;
-	padding: 30px 15px 10px 15px;
+	padding: 0 15px 10px 15px;
 }
 
 #branding h1 span:first-child {
@@ -325,12 +314,6 @@ h6 a:hover {
 	padding-top: 0.2em;
 }
 
-#main-menu {
-	margin-bottom: 3em;
-	position: relative;
-	z-index: 110;
-}
-
 #main-menu ul {
 	display: flex;
 	justify-content: flex-end;
@@ -366,18 +349,15 @@ h6 a:hover {
 	text-shadow: 1px 2px 3px rgba(0, 0, 0, .1);
 }
 
-.position-step2 #main-menu,
-.position-step3 #main-menu,
-.position-step4 #main-menu {
+#main-menu {
 	position: fixed;
 	top: 80px;
 	right: 0;
 	left: 0;
+	z-index: 2000;
 }
 
-.position-step2 #main-menu ul li a,
-.position-step3 #main-menu ul li a,
-.position-step4 #main-menu ul li a {
+#main-menu ul li a {
 	color: #000;
 }
 
@@ -473,9 +453,7 @@ body.hamburger-active #hamburger span:after {
 	#contact-bar {
 		margin-right: 50px;
 	}
-	.position-step2 #branding h1,
-	.position-step3 #branding h1,
-	.position-step4 #branding h1 {
+	#branding h1 {
 		margin-top: 30px;
 	}
 	#slogan h2,
@@ -540,16 +518,6 @@ body.hamburger-active #hamburger span:after {
 #about {
 	overflow: hidden;
 }
-
-
-/* body.position-step2 {
-	margin-top: 20px;
-}
-
-body.position-step3,
-body.position-step4 {
-	margin-top: 95px;
-} */
 
 #about .container {
 	overflow: hidden;
