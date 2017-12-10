@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="183px" height="183px" viewBox="0 0 183 183" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo Light</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Basic-Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo-Light">
+            <rect id="Background" fill="#8AFF4C" x="0" y="0" width="183" height="183" rx="10"></rect>
+            <path d="M0,60.6796151 C0,60.6796151 45.4898062,43 93.3217612,43 C141.153716,43 182.349313,52.8327845 182.349313,52.8327845 L183,159 L0.131108536,158.385264 L0,60.6796151 Z" id="Top-hill" fill="#5CF407"></path>
+            <path d="M0,86.1738225 C0,86.1738225 43.8792487,75 79.7661011,75 C115.652953,75 138.86036,84.1239917 157.600422,87.1688134 C176.340483,90.2136352 182.99349,87.1688134 182.99349,87.1688134 L183,167 L0.372685556,166.516719 L0,86.1738225 Z" id="Medium-hill" fill="#40AF0A"></path>
+            <path d="M0,113.27684 C0,113.27684 29.5232814,103.055071 60.3704333,108.7 C91.2175851,114.344928 95.3219071,125.642671 130.716829,125.642672 C166.111751,125.642673 183,121.551756 183,121.551756 L182.637473,179.170096 L1.30121249,179.940002 L0,113.27684 Z" id="Bottom-hill" fill="#2A7409"></path>
+            <rect id="Box" stroke="#2E9101" stroke-width="5" x="2.5" y="2.5" width="178" height="178.233533" rx="10"></rect>
+        </g>
+    </g>
+</svg>
