@@ -339,11 +339,11 @@ h6 a:hover {
 
 #main-menu ul li:hover,
 #main-menu ul li.active {
-	border-bottom: 3px solid #333;
+	border-bottom: 3px solid #eee;
 }
 
 #main-menu ul li a {
-	color: #333;
+	color: #eee;
 	padding: 0.5em 0em 0.3em 0em;
 	text-decoration: none;
 	text-shadow: 1px 2px 3px rgba(0, 0, 0, .1);
@@ -355,10 +355,6 @@ h6 a:hover {
 	right: 0;
 	left: 0;
 	z-index: 2000;
-}
-
-#main-menu ul li a {
-	color: #000;
 }
 
 
@@ -562,14 +558,14 @@ body.main #content li {
 }
 
 #article .container:before {
-	content: "";
+	content: "\25BA";
 	display: inline-block;
 	width: 14px;
 	height: 16px;
 	margin-right: 12px;
-	background: url(../images/more_arrow.png) top left no-repeat;
 	position: relative;
 	bottom: -1px;
+	color: #000;
 }
 
 #article a {
