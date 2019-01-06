@@ -437,6 +437,24 @@ body.hamburger-active #hamburger span:after {
 	opacity: 0;
 }
 
+body.main #content ul,
+body.main #content p {
+	font-size: 1.2em;
+}
+
+body.main #content ul,
+body.chi-siamo #content ul,
+body.servizi #content ul {
+	margin-bottom: 1em;
+	max-width: 40em;
+	list-style-type: disc;
+	padding: 0 1em;
+}
+
+body.main #content li {
+	padding: .5em 0;
+}
+
 @media (max-width: 49em) {
 	#slogan h2 {
 		padding-right: 0;
@@ -618,6 +636,26 @@ img {
 	-webkit-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.3) inset;
 	-moz-box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.3) inset;
 	box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.3) inset;
+}
+
+body.main #illustrative-image {
+	background: url(../images/attivita_b.jpg) no-repeat;
+}
+
+body.chi-siamo #illustrative-image {
+	background: url(../images/attivita_b.jpg) no-repeat;
+}
+
+body.servizi #illustrative-image {
+	background: url(../images/attivita_b.jpg) no-repeat;
+}
+
+body.casi #illustrative-image {
+	background: url(../images/attivita_b.jpg) no-repeat;
+}
+
+body.contatti #illustrative-image {
+	background: url(../images/attivita_b.jpg) no-repeat;
 }
 
 body.attivita #illustrative-image {
