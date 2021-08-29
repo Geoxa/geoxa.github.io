@@ -805,6 +805,12 @@ body.foto #inner h2 {
 	clear: none;
 }
 
+.shutter-message{
+	text-align: center;
+	line-height: 4;
+	font-size: 2em !important;
+}
+
 .foto #inner ul li {
 	min-height: 220px;
 }
