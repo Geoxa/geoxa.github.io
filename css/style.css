@@ -458,6 +458,7 @@ body.main #content li {
 		margin-left: 160px;
 		text-align: right;
 	}
+
 	#main-menu ul {
 		margin-right: -5px;
 	}
@@ -467,17 +468,21 @@ body.main #content li {
 	#contact-bar {
 		margin-right: 50px;
 	}
+
 	#branding h1 {
 		margin-top: 30px;
 	}
+
 	#slogan h2,
 	#slogan h2,
 	#slogan h2 {
 		font-size: .85em;
 	}
+
 	#hamburger {
 		display: block;
 	}
+
 	#main-menu .container {
 		display: none;
 		position: fixed;
@@ -490,9 +495,11 @@ body.main #content li {
 		background: #000;
 		z-index: 1000;
 	}
+
 	body.hamburger-active #main-menu .container {
 		display: block;
 	}
+
 	#main-menu ul {
 		flex-direction: column;
 		margin-left: 0;
@@ -500,6 +507,7 @@ body.main #content li {
 		padding-left: 0;
 		padding-right: 0;
 	}
+
 	#main-menu ul li {
 		display: block;
 		text-align: center;
@@ -508,16 +516,19 @@ body.main #content li {
 		margin-left: 0;
 		margin-right: 0;
 	}
+
 	#main-menu ul li a {
 		display: block;
 		text-align: inherit;
 	}
+
 	#main-menu ul li:hover,
 	#main-menu ul li.active {
 		border-bottom: none;
 		background: #fff;
 		color: #000;
 	}
+
 	#main-menu ul li:hover a,
 	#main-menu ul li.active a {
 		color: inherit;
@@ -596,12 +607,14 @@ img {
 }
 
 @media (max-width: 49em) {
+
 	#intro,
 	#clients,
 	#article {
 		width: 100%;
 		float: none;
 	}
+
 	#intro {
 		margin-bottom: 16px;
 	}
@@ -688,6 +701,7 @@ body.drone #illustrative-image {
 }
 
 @media (max-width: 49em) {
+
 	#content #attivita section,
 	#content #photo section {
 		display: block;
@@ -712,6 +726,7 @@ body.drone #illustrative-image {
 	#content #photo img {
 		max-width: 45%;
 	}
+
 	#content .section-image {
 		width: 100%;
 		margin-bottom: 1em;
@@ -805,7 +820,7 @@ body.foto #inner h2 {
 	clear: none;
 }
 
-.shutter-message{
+.shutter-message {
 	text-align: center;
 	line-height: 4;
 	font-size: 2em !important;
@@ -897,6 +912,7 @@ body.drone table th:first-child {
 }
 
 @media (max-width: 49em) {
+
 	#inner ul li.odd,
 	#inner ul li.even {
 		width: 100%;
@@ -905,6 +921,7 @@ body.drone table th:first-child {
 		min-height: auto;
 		float: none;
 	}
+
 	div.left,
 	div.right {
 		float: none;
@@ -912,14 +929,17 @@ body.drone table th:first-child {
 		margin: 0;
 		padding: 0;
 	}
+
 	img.illustrative,
 	iframe {
 		max-width: 100%;
 		float: none;
 	}
+
 	.atrezzatura {
 		clear: both;
 	}
+
 	p {
 		padding-top: 0;
 	}
@@ -951,5 +971,13 @@ body.preventivo .google-form-preventivo {
 	body.contatti .addresses {
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-rows: repeat(2, 1fr);
-	}	
+	}
+}
+
+.counter {
+	text-align: center;
+	font-size: 2em;
+	padding-top: 3em;
+	padding-bottom: 3em;
+	;
 }
