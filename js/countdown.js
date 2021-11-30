@@ -4,7 +4,7 @@ var message = document.querySelector('.message');
 var pacman = document.querySelector('.pacman');
 var datetime = "2021-12-01T08:00:00";
 var timer = null;
-var gameTimeout = 90000;
+var gameTimeout = 60000;
 
 var params = new URLSearchParams(window.location.search)
 var mock = params.get("mock") === 'true';
