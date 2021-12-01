@@ -2,13 +2,15 @@ var counter = document.querySelector('.counter');
 var gameover = document.querySelector('.gameover');
 var message = document.querySelector('.message');
 var pacman = document.querySelector('.pacman');
+var header = document.querySelector('#header');
+var illustrativeImage = document.querySelector('#illustrative-image');
 var datetime = "2021-12-01T08:00:00";
 var timer = null;
-var gameTimeout = 60000;
+var gameTimeout = 15000;
 
 var params = new URLSearchParams(window.location.search)
 var mock = params.get("mock") === 'true';
-var reallymock = params.get("reallymock") === 'really';
+var easter = params.get("easter") === 'true';
 
 
 function areWeThereYet() {
@@ -22,9 +24,11 @@ function areWeThereYet() {
 function gameOver() {
   counter.classList.add('hidden');
   message.classList.remove('hidden');
+  document.querySelector('body.main').style.paddingTop = 0
+
   if (!timer) { gameover.classList.remove('hidden'); }
 
-  if (!timer && reallymock) {
+  if (!timer && easter) {
     timer = setTimeout(() => {
       gameover.classList.add('hidden');
       pacman.classList.remove('hidden')
@@ -36,6 +40,8 @@ if (areWeThereYet()) {
   gameOver()
 }
 else {
+  header.classList.remove('hidden');
+  illustrativeImage.classList.remove('hidden');
   counter.innerText = moment(datetime).countdown().toString();
 }
 
@@ -46,5 +52,3 @@ setInterval(() => {
     gameOver();
   }
 }, 1000)
-
-cons
